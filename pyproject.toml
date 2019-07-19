@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "graphql-core-next"
-version = "1.1.1"
+version = "1.2.0"
 description = """
 GraphQL-core-next is a Python port of GraphQL.js,
  the JavaScript reference implementation for GraphQL."""
-licese="MIT"
+license = "MIT"
 authors = [
     "Christoph Zwerschke <cito@online.de>"
 ]

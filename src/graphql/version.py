@@ -5,7 +5,7 @@ from warnings import warn
 __all__ = ["version", "version_info", "version_js", "version_info_js"]
 
 
-version = "1.1.1"
+version = "1.2.0"
 
 version_js = "14.4.0"
 

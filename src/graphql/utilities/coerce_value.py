@@ -164,18 +164,19 @@ def coerce_value(
                     ] = coerced_field.value
 
         # Ensure every provided field is defined.
-        for field_name in value:
-            if field_name not in fields:
-                suggestions = suggestion_list(field_name, fields)
-                errors = add(
-                    errors,
-                    coercion_error(
-                        f"Field '{field_name}' is not defined by type {type_.name}",
-                        blame_node,
-                        path,
-                        did_you_mean(suggestions),
-                    ),
-                )
+        if not type_.skip_check_fields:
+            for field_name in value:
+                if field_name not in fields:
+                    suggestions = suggestion_list(field_name, fields)
+                    errors = add(
+                        errors,
+                        coercion_error(
+                            f"Field '{field_name}' is not defined by type {type_.name}",
+                            blame_node,
+                            path,
+                            did_you_mean(suggestions),
+                        ),
+                    )
 
         return (
             of_errors(errors)

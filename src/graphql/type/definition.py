@@ -1157,6 +1157,8 @@ class GraphQLInputObjectType(GraphQLNamedType):
 
     The outbound values will be Python dictionaries by default, but you can have them
     converted to other types by specifying an `out_type` function or class.
+
+    skip_check_fields will skip to skip "every provided field is defined" when coerce_value.
     """
 
     ast_node: Optional[InputObjectTypeDefinitionNode]
@@ -1170,6 +1172,7 @@ class GraphQLInputObjectType(GraphQLNamedType):
         out_type: GraphQLInputFieldOutType = None,
         ast_node: InputObjectTypeDefinitionNode = None,
         extension_ast_nodes: Sequence[InputObjectTypeExtensionNode] = None,
+        skip_check_fields: bool = False
     ) -> None:
         super().__init__(
             name=name,
@@ -1194,6 +1197,7 @@ class GraphQLInputObjectType(GraphQLNamedType):
         self._fields = fields
         if out_type is not None:
             self.out_type = out_type
+        self.skip_check_fields = skip_check_fields
 
     @staticmethod
     def out_type(value: Dict[str, Any]) -> Any:

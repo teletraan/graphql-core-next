@@ -12,7 +12,7 @@ a query language for APIs created by Facebook.
 [![Python 3 Status](https://pyup.io/repos/github/graphql-python/graphql-core-next/python-3-shield.svg)](https://pyup.io/repos/github/graphql-python/graphql-core-next/)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
-The current version 1.1.1 of GraphQL-core-next is up-to-date with GraphQL.js version
+The current version 1.2.0 of GraphQL-core-next is up-to-date with GraphQL.js version
 14.4.0. All parts of the API are covered by an extensive test suite of currently 1885
 unit tests.
 
@@ -247,10 +247,10 @@ The GraphQL-core-next library
   by the [GraphQL foundation](https://gql.foundation/join/)
 
 Please watch the recording of Lee Byron's short keynote on the
-[history of GraphQL](https://www.youtube.com/watch?v=VjHWkBr3tjI) 
+[history of GraphQL](https://www.youtube.com/watch?v=VjHWkBr3tjI)
 at the open source leadership summit 2019 to better understand
 how and why GraphQL was created at Facebook and then became open sourced
-and ported to many different programming languages. 
+and ported to many different programming languages.
 
 
 ## License
